@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="asset/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 60px;
+            background: #222;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8" align="center"><img style="" src="<%= first %>" alt=""/></div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+<script src="asset/jquery.min.js"></script>
+<script src="asset/underscore.min.js"></script>
+<script>
+
+    $(function () {
+        'use strict';
+        var arr = [];
+        for (var v = 2; v <= <%=total%>; v++) {
+            arr.push(v);
+        }
+        console.log("arr", arr);
+        _.each(arr, function(ele, index){
+            var qs = 'q=<%=url%>'+ '&i=' + ele;
+            $.getJSON('/detail?' + qs, function(result){
+                 var linksContainer = $('#container');
+                $('<div class="row"><div class="col-lg-2"></div><div class="col-lg-8" align="center"><img style="" src="' + result.src + '" alt=""/></div><div class="col-lg-2"></div></div>')
+                        .appendTo(linksContainer);
+            });
+        });
+    });
+</script>
+</body>
+</html>
