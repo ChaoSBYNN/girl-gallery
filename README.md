@@ -15,8 +15,11 @@
         
 4.备注
     |-- 由于网站的图片都是由其他站点提供，所以我并不能保证当你打开网站的首页时，你能够看到图片。
+
+5.运行
+    |-- 项目根目录下node mm.js ,启动后访问 http://localhost:2014/index.html
     
-5.心得
+6.心得
 	|-- SailsJS,赞一个。
 	|-- 最近一直在用angularjs,通过这次demo感觉，jquey还是有自己的优势的，需要多加学习。
 	|-- 感谢'Bootstrap-Image-Gallery'这款插件，给了我很大的启发。
