@@ -9,13 +9,13 @@
         "sails-disk": "~0.9.0",
         "ejs": "0.8.4",
         "optimist": "0.3.4",
-        "request": "*",
-        "cheerio": "*",
-        "underscore.string": "*",
-        "underscore":"*"
+        "request": "2.40.0",
+        "cheerio": "0.17.0",
+        "underscore.string": "2.3.3",
+        "underscore":"1.6.0"
     },
     "scripts": {
-        "start": "node app.js",
+        "start": "nodemon -e html,js,css -w assets/views -w api/ -w assets -w config/",
         "debug": "node debug app.js"
     },
     "main": "mm.js",
