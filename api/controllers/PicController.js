@@ -19,6 +19,9 @@ var cheerio = require('cheerio');
 var fs = require('fs');
 var _ = require("underscore")._;
 module.exports = {
+    getIndexPage: function(req, res){
+      res.render('home/index');
+    },
     getPic: function(req, res){
         var url = [
             'http://www.22mm.cc/mm/qingliang/',

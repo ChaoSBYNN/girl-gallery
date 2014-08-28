@@ -33,7 +33,16 @@ module.exports.routes = {
   // 
   // (This would also work if you had a file at: `/views/home.ejs`)
   '/': {
-    view: 'home/index'
+      controller: 'PicController',
+      action:'getIndexPage'
+  },
+  "/random":{
+    controller: 'DetailController',
+    action:'getRandomPage'
+  },
+  "/index.html":{
+      controller: 'PicController',
+      action:'getIndexPage'
   }
 
   /*
