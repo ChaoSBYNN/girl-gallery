@@ -60,7 +60,7 @@
                 var linksContainer = $('#container');
                 _.each(result, function(ele, index){
                     console.log("ele", ele);
-                    $('<div class="row"><div class="col-lg-2"></div><div class="col-lg-8" align="center"><img style="" src="' + ele + '" alt=""/></div><div class="col-lg-2"></div></div>')
+                    $('<div class="row" style="margin-bottom:10px"><div class="col-lg-2"></div><div class="col-lg-8" align="center"><img style="" src="' + ele + '" alt=""/></div><div class="col-lg-2"></div></div>')
                             .appendTo(linksContainer);
                 })
             });
