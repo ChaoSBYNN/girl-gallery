@@ -16,7 +16,7 @@
         "async":"0.9.0"
     },
     "scripts": {
-        "start": "nodemon -e html,js,css -w assets/views -w api/ -w assets -w config/",
+        "start": "nodemon -e html,js,css -w assets/views -w api/ -w assets -w config/ -w api/",
         "debug": "node debug app.js"
     },
     "main": "mm.js",

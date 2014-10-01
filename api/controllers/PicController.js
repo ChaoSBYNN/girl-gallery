@@ -34,7 +34,7 @@ module.exports = {
         var u = url[r1] + 'index_' + r2 + '.html';
 //        console.log("random", r1);
 //        console.log("random2", r2);
-//        console.log("u", u);
+        console.log("u", u);
         request(u, function (error, re, body) {
             if (!error && re.statusCode == 200) {
                 var $ = cheerio.load(body);
@@ -53,7 +53,7 @@ module.exports = {
                     };
                     arr.push(obj);
                 });
-
+                console.log("arr", arr);
                 res.json( _.last(arr, 32));
 
             }
