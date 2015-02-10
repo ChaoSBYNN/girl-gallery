@@ -70,11 +70,17 @@ module.exports = {
                     var s = src.substring(a+2, b);
                     var s = s.replace('big', 'pic');
                     var total = strong;
-                    res.render('detail', {
+                    var resObj = {
                         total: total,
                         first: s,
                         url: qs.qs.replace('.html', '')
-                    });
+                    };
+                    if (qs.mobile) {
+                        res.send(resObj);
+                    } else {
+                        res.render('detail', resObj);
+
+                    }
 //                res.json({total: total, src: s});
                 }
             })
